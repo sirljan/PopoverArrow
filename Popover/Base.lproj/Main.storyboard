@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lup-sL-BVG">
+                                <rect key="frame" x="222" y="285" width="157" height="30"/>
+                                <state key="normal" title="Present VC as Popover"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l9h-y7-H1b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpC-oc-rXq">
+                                <rect key="frame" x="409" y="285" width="44" height="30"/>
+                                <state key="normal" title="Segue"/>
+                                <connections>
+                                    <segue destination="McM-YG-M50" kind="popoverPresentation" popoverAnchorView="qpC-oc-rXq" id="LeQ-J0-d3y">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lup-sL-BVG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1hL-3Y-6Xu"/>
+                            <constraint firstItem="qpC-oc-rXq" firstAttribute="leading" secondItem="Lup-sL-BVG" secondAttribute="trailing" constant="30" id="UcW-zT-Ryb"/>
+                            <constraint firstItem="qpC-oc-rXq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="drB-L8-wq1"/>
+                            <constraint firstItem="Lup-sL-BVG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oOp-Af-mZ3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="F4P-MB-APD">
+            <objects>
+                <viewController storyboardIdentifier="MyPopover" id="b1s-lW-uCp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gbg-Rj-Izk"/>
+                        <viewControllerLayoutGuide type="bottom" id="xTz-B0-yRd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cUr-6Y-jtV">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxW-Hl-n2X">
+                                <rect key="frame" x="152" y="28" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Fpx-W5-uDD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qxW-Hl-n2X" firstAttribute="top" secondItem="gbg-Rj-Izk" secondAttribute="bottom" constant="28" id="3xT-Bz-wHd"/>
+                            <constraint firstItem="qxW-Hl-n2X" firstAttribute="centerX" secondItem="cUr-6Y-jtV" secondAttribute="centerX" id="OR0-YZ-v2O"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H65-Da-BCX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="1143"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x9C-6d-VIc">
+            <objects>
+                <viewController id="McM-YG-M50" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uNm-5Q-uMF"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Kq-iT-ZzH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RLG-rE-gpk">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z41-zW-Bht">
+                                <rect key="frame" x="152" y="28" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="0tp-SL-69e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z41-zW-Bht" firstAttribute="top" secondItem="uNm-5Q-uMF" secondAttribute="bottom" constant="8" id="Gtb-qI-Nig"/>
+                            <constraint firstItem="z41-zW-Bht" firstAttribute="centerX" secondItem="RLG-rE-gpk" secondAttribute="centerX" id="yyZ-PP-tnm"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbe-1f-5A2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095" y="449"/>
+        </scene>
+    </scenes>
+</document>
